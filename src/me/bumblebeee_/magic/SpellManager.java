@@ -11,11 +11,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class SpellManager {
+
+    //Keeps track of which player has which spell selected
+    public static HashMap<UUID, String> selected = new HashMap<>();
 
     public String getSpell(List<ItemStack> itemStacks) {
         for (String spell : getAllSpells()) {
@@ -39,13 +40,47 @@ public class SpellManager {
                         return spell;
                 }
             }
-
         }
         return null;
     }
 
+    public List<String> getWandSpells(String id) {
+        File f = new File(Magic.getInstance().getDataFolder() + File.separator + "storage.yml");
+        if (!f.exists())
+            return new ArrayList<>();
+        YamlConfiguration c = YamlConfiguration.loadConfiguration(f);
+        if (c.getConfigurationSection("wands") == null)
+            return new ArrayList<>();
+        if (!c.getConfigurationSection("wands").getKeys(false).contains(id))
+            return new ArrayList<>();
+        return c.getStringList("wands." + id);
+    }
+
     public Set<String> getAllSpells() {
         return Magic.getInstance().getConfig().getConfigurationSection("spells").getKeys(false);
+    }
+
+    public void addSpell(String spell, ItemStack wand) {
+        String data = HiddenStringUtils.extractHiddenString(wand.getItemMeta().getLore().get(wand.getItemMeta().getLore().size()-1));
+        String id = data.split(" ")[1];
+        File f = new File(Magic.getInstance().getDataFolder() + File.separator + "storage.yml");
+        if (!f.exists())
+            return;
+
+        YamlConfiguration c = YamlConfiguration.loadConfiguration(f);
+        if (c.getConfigurationSection("wands") == null || !c.getConfigurationSection("wands").getKeys(false).contains(id)) {
+            c.set("wands." + id, new ArrayList<>(Arrays.asList(spell)));
+        } else {
+            List<String> spells = c.getStringList("wands." + id);
+            spells.add(spell);
+            c.set("wands." + id, spells);
+        }
+
+        try {
+            c.save(f);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public List<Material> convertToMaterialList(List<ItemStack> itemstack) {
@@ -73,6 +108,16 @@ public class SpellManager {
         return true;
     }
 
+    public Material getWandType() {
+        Material m;
+        try {
+            m = Material.matchMaterial(Magic.getInstance().getConfig().getString("wandItem"));
+        } catch (Exception e) {
+            return null;
+        }
+        return m;
+    }
+
     public void giveWandToPlayer(Player p) {
         Material m;
         try {
@@ -93,7 +138,7 @@ public class SpellManager {
         lore.add(HiddenStringUtils.encodeString("wand: " + wand));
         ItemStack i = new ItemStack(m);
         ItemMeta im = i.getItemMeta();
-        im.setDisplayName(Magic.getInstance().getConfig().getString("wandName"));
+        im.setDisplayName(ChatColor.translateAlternateColorCodes('&', Magic.getInstance().getConfig().getString("wandName")));
         im.setLore(lore);
         i.setItemMeta(im);
 
