@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MagicContest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MagicContest_jar</output-path>
+    <root id="archive" name="MagicContest.jar">
+      <element id="module-output" name="MagicContest" />
+    </root>
+  </artifact>
+</component>

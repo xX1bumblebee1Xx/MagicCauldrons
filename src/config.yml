@@ -1,0 +1,31 @@
+wandItem: BLAZE_ROD
+wandName: "&6Magic Wand"
+wandLore:
+- "&5Click to cast a spell"
+- "Press Q to select a spell"
+
+spells:
+  fireball:
+    level: 2
+    recipe:
+    - FIREWORK_CHARGE
+    - REDSTONE
+    - NETHER_STALK
+  shoot:
+    level: 1
+    recipe:
+    - TNT
+    - REDSTONE
+    - NETHER_STALK
+  lightning:
+    level: 2
+    recipe:
+    - SULPHUR
+    - REDSTONE
+    - NETHER_STALK
+  poison:
+    level: 1
+    recipe:
+    - SPIDER_EYE
+    - REDSTONE
+    - NETHER_STALK
