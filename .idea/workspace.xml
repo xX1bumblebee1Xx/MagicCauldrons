@@ -7,20 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a88882-dbec-4b00-91f8-2f1a5883ca71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/DropItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/MagicContest_jar/MagicContest.jar" afterPath="$PROJECT_DIR$/out/artifacts/MagicContest_jar/MagicContest.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/Magic.class" afterPath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/Magic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/SpellManager.class" afterPath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/SpellManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/listeners/InventoryClick.class" afterPath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/listeners/InventoryClick.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/listeners/OffhandSwap.class" afterPath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/listeners/OffhandSwap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/listeners/PlayerInteract.class" afterPath="$PROJECT_DIR$/out/production/MagicContest/me/bumblebeee_/magic/listeners/PlayerInteract.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MagicContest/config.yml" afterPath="$PROJECT_DIR$/out/production/MagicContest/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config.yml" afterPath="$PROJECT_DIR$/src/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/bumblebeee_/magic/Magic.java" afterPath="$PROJECT_DIR$/src/me/bumblebeee_/magic/Magic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/bumblebeee_/magic/SpellManager.java" afterPath="$PROJECT_DIR$/src/me/bumblebeee_/magic/SpellManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/InventoryClick.java" afterPath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/InventoryClick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/OffhandSwap.java" afterPath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/OffhandSwap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/PlayerInteract.java" afterPath="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/PlayerInteract.java" />
     </list>
     <ignored path="MagicContest.iws" />
@@ -55,14 +43,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerInteract.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerInteract.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/PlayerInteract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5930736">
-              <caret line="154" column="33" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="147" column="38" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41379312">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,8 +96,8 @@
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/OffhandSwap.java" />
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/Magic.java" />
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/SpellManager.java" />
-        <option value="$PROJECT_DIR$/src/config.yml" />
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/PlayerInteract.java" />
+        <option value="$PROJECT_DIR$/src/config.yml" />
       </list>
     </option>
   </component>
@@ -509,7 +507,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22006473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22006473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -760,21 +758,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22758621">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/PlayerInteract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5930736">
-          <caret line="154" column="33" selection-start-line="154" selection-start-column="33" selection-end-line="154" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="147" column="38" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41379312">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

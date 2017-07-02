@@ -39,7 +39,6 @@ public class PlayerInteract implements Listener {
             if (e.getItem() != null && e.getItem().getType() == Material.WATER_BUCKET)
                 return;
 
-            e.setCancelled(true);
             Block b = e.getClickedBlock();
             List<ItemStack> items = new ArrayList<>();
             List<Entity> remove = new ArrayList<>();
@@ -172,6 +171,14 @@ public class PlayerInteract implements Listener {
                     if (!(en instanceof LivingEntity))
                         continue;
                     ((LivingEntity) en).addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 0));
+                }
+            } else if (spell.equalsIgnoreCase("miner")) {
+                BlockIterator blocksToAdd = new BlockIterator(p.getLocation(), 2, 20);
+                Location blockToAdd;
+                while(blocksToAdd.hasNext()) {
+                    blockToAdd = blocksToAdd.next().getLocation();
+                    blockToAdd.getBlock().setType(Material.AIR);
+                    p.getWorld().playEffect(blockToAdd, Effect.SMOKE, 4);
                 }
             }
         }

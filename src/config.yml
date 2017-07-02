@@ -33,3 +33,18 @@ spells:
     - SPIDER_EYE
     - REDSTONE
     - NETHER_STALK
+  abilityStealer:
+    disabled: false
+    level: 3
+    recipe:
+    - REDSTONE
+    - NETHER_STALK
+    - NETHER_STAR
+  miner:
+    disabled: false
+    level: 3
+    recipe:
+    - REDSTONE
+    - NETHER_STALK
+    - DIAMOND_PICKAXE
+  #THROW BLOCKS
