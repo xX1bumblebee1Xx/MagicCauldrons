@@ -1,5 +1,6 @@
 package me.bumblebeee_.magic;
 
+import me.bumblebeee_.magic.listeners.DropItem;
 import me.bumblebeee_.magic.listeners.InventoryClick;
 import me.bumblebeee_.magic.listeners.OffhandSwap;
 import me.bumblebeee_.magic.listeners.PlayerInteract;
@@ -43,6 +44,7 @@ public class Magic extends JavaPlugin {
     public void registerEvents() {
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new OffhandSwap(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new DropItem(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
     }
 

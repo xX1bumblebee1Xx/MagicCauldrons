@@ -4,6 +4,8 @@ import me.bumblebeee_.magic.HiddenStringUtils;
 import me.bumblebeee_.magic.Magic;
 import me.bumblebeee_.magic.SpellManager;
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.Effect;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
@@ -17,8 +19,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.Cauldron;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.util.BlockIterator;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -55,23 +59,8 @@ public class PlayerInteract implements Listener {
                 if (en.getLocation().distance(b.getLocation()) <= 1.5 && en.getLocation().getBlock().getType() == Material.CAULDRON) {
                     if (en instanceof Item) {
                         ItemStack i = ((Item) en).getItemStack();
-                        if (i.getType() == spells.getWandType()) {
-                            if (i.hasItemMeta() && i.getItemMeta().hasDisplayName()) {
-                                String dis = ChatColor.translateAlternateColorCodes('&', Magic.getInstance().getConfig().getString("wandName"));
-                                if (i.getItemMeta().getDisplayName().equals(dis)) {
-                                    wand = i;
-                                } else {
-                                    remove.add(en);
-                                    items.add(i);
-                                }
-                            } else {
-                                remove.add(en);
-                                items.add(i);
-                            }
-                        } else {
-                            remove.add(en);
-                            items.add(i);
-                        }
+                        remove.add(en);
+                        items.add(i);
                     }
                 }
             }
@@ -82,12 +71,37 @@ public class PlayerInteract implements Listener {
                 return;
             }
 
-            //TODO level
+            int spellLevel = spells.getSpellLevel(spell);
+            int caulLevel = spells.getCauldronLevel(b);
 
-            if (wand == null) {
-                p.sendMessage("You must include you wand as well!");
+            if (spellLevel > caulLevel) {
+                p.sendMessage("This cauldron is not capable of casting this spell!");
                 return;
             }
+
+            if (p.getInventory().getItemInMainHand() == null) {
+                p.sendMessage("You must be holding your wand!");
+                return;
+            }
+            if (p.getInventory().getItemInMainHand().getType() != spells.getWandType()) {
+                p.sendMessage("You must be holding your wand!");
+                return;
+            }
+            if (!p.getInventory().getItemInMainHand().hasItemMeta()) {
+                p.sendMessage("You must be holding your wand!");
+                return;
+            }
+            if (!p.getInventory().getItemInMainHand().getItemMeta().hasDisplayName()) {
+                p.sendMessage("You must be holding your wand!");
+                return;
+            }
+            String display = p.getInventory().getItemInMainHand().getItemMeta().getDisplayName();
+            String wandName = ChatColor.translateAlternateColorCodes('&', Magic.getInstance().getConfig().getString("wandName"));
+            if (!display.equalsIgnoreCase(wandName)) {
+                p.sendMessage("You must be holding your wand!");
+                return;
+            }
+            wand = p.getInventory().getItemInMainHand();
 
             List<String> lore = wand.getItemMeta().getLore();
             String id = HiddenStringUtils.extractHiddenString(lore.get(lore.size()-1)).split(" ")[1];
@@ -105,6 +119,7 @@ public class PlayerInteract implements Listener {
             BlockState bs = b.getState();
             bs.getData().setData((byte) (c.getData() - 1));
             bs.update();
+            p.sendMessage("Successfully cast spell!");
         } else {
             if (e.getAction() != Action.LEFT_CLICK_AIR) {
                 if (e.getAction() != Action.LEFT_CLICK_BLOCK)
@@ -116,18 +131,42 @@ public class PlayerInteract implements Listener {
                 return;
 
             e.setCancelled(true);
-            if (!SpellManager.selected.containsKey(p.getUniqueId())) {
+            String id = spells.getWandID(e.getItem());
+            if (!SpellManager.selected.containsKey(id)) {
                 p.sendMessage("You do not have any spell selected");
                 return;
             }
 
-            String spell = SpellManager.selected.get(p.getUniqueId());
+            String spell = SpellManager.selected.get(id);
             if (spell.equalsIgnoreCase("fireball")) {
                 p.launchProjectile(Fireball.class);
             } else if (spell.equalsIgnoreCase("lightning")) {
                 p.getWorld().strikeLightning(p.getTargetBlock(((Set<Material>) null), 100).getLocation());
             } else if (spell.equalsIgnoreCase("shoot")) {
+                BlockIterator blocksToAdd = new BlockIterator(p.getLocation(), 2, 100);
+                Location blockToAdd;
+                int buffer = 0;
+                while(blocksToAdd.hasNext()) {
+                    blockToAdd = blocksToAdd.next().getLocation();
+                    Collection<Entity> entities = blockToAdd.getWorld().getNearbyEntities(blockToAdd, 0.5, 0.5, 0.5);
+                    if (blockToAdd.getBlock().getType() != Material.AIR) {
+                        break;
+                    } else if (entities.size() > 0) {
+                        buffer++;
+                        if (buffer <= 2)
+                            continue;
+                        for (Entity entity : entities) {
+                            if (entity.equals(p))
+                                continue;
+                            if (entity instanceof LivingEntity) {
+                                LivingEntity en = (LivingEntity) entity;
+                                    en.damage(2);
+                            }
+                        }
 
+                    }
+                    p.getWorld().playEffect(blockToAdd, Effect.SMOKE, 4);
+                }
             } else if (spell.equalsIgnoreCase("poison")) {
                 for (Entity en : p.getNearbyEntities(5, 5, 5)) {
                     if (!(en instanceof LivingEntity))

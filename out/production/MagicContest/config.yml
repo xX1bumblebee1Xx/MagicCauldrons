@@ -2,7 +2,7 @@ wandItem: BLAZE_ROD
 wandName: "&6Magic Wand"
 wandLore:
 - "&5Click to cast a spell"
-- "Press F to select a spell"
+- "Press Q to select a spell"
 
 spells:
   fireball:

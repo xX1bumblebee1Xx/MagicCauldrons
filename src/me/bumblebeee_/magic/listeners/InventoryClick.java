@@ -9,6 +9,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class InventoryClick implements Listener {
 
+    SpellManager spells = new SpellManager();
+
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
         if (!e.getInventory().getName().equals("Your spells"))
@@ -23,11 +25,12 @@ public class InventoryClick implements Listener {
         e.setCancelled(true);
         String dis = ChatColor.stripColor(e.getCurrentItem().getItemMeta().getDisplayName());
         Player p = (Player) e.getWhoClicked();
+        String id = spells.getWandID(p.getInventory().getItemInMainHand());
         if (dis.equals("Close")) {
             p.closeInventory();
         } else if (dis.equals("Deselect spell")) {
-            if (SpellManager.selected.containsKey(p.getUniqueId())) {
-                SpellManager.selected.remove(p.getUniqueId());
+            if (SpellManager.selected.containsKey(id)) {
+                SpellManager.selected.remove(id);
                 p.sendMessage("Deselected spell");
             } else {
                 p.sendMessage("You do not have any spell selected");
@@ -35,11 +38,11 @@ public class InventoryClick implements Listener {
             p.closeInventory();
         } else if (dis.startsWith("Select")) {
             String spell = dis.split(" ")[1];
-            if (SpellManager.selected.containsKey(p.getUniqueId()) && SpellManager.selected.get(p.getUniqueId()).equals(spell)) {
+            if (SpellManager.selected.containsKey(id) && SpellManager.selected.get(id).equals(spell)) {
                 p.sendMessage("You already have that spell selected");
             } else {
                 p.sendMessage("Selected " + spell);
-                SpellManager.selected.put(p.getUniqueId(), spell.toLowerCase());
+                SpellManager.selected.put(id, spell.toLowerCase());
             }
             p.closeInventory();
         }

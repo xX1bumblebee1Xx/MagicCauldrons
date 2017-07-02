@@ -24,22 +24,7 @@ public class OffhandSwap implements Listener {
 
     @EventHandler
     public void onOffhandSwap(PlayerSwapHandItemsEvent e) {
-        if (e.getOffHandItem().getType() != spells.getWandType())
-            return;
-        if (!e.getOffHandItem().hasItemMeta())
-            return;
-        if (!e.getOffHandItem().getItemMeta().hasDisplayName())
-            return;
-        String dis = e.getOffHandItem().getItemMeta().getDisplayName();
-        if (!dis.equals(ChatColor.translateAlternateColorCodes('&', Magic.getInstance().getConfig().getString("wandName"))))
-            return;
 
-        Player p = e.getPlayer();
-        List<String> lore = e.getOffHandItem().getItemMeta().getLore();
-        String id = HiddenStringUtils.extractHiddenString(lore.get(lore.size()-1));
-
-        inv.openSpells(p, id);
-        e.setCancelled(true);
     }
 
 }

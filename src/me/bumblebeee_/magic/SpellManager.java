@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -16,7 +17,8 @@ import java.util.*;
 public class SpellManager {
 
     //Keeps track of which player has which spell selected
-    public static HashMap<UUID, String> selected = new HashMap<>();
+    //WandID, SelectedSpell
+    public static HashMap<String, String> selected = new HashMap<>();
 
     public String getSpell(List<ItemStack> itemStacks) {
         for (String spell : getAllSpells()) {
@@ -106,6 +108,31 @@ public class SpellManager {
             }
         }
         return true;
+    }
+
+    public int getCauldronLevel(Block cauldron) {
+        Block check = cauldron.getLocation().subtract(0,1,0).getBlock();
+        if (check.getType() == Material.DIAMOND_BLOCK)
+            return 3;
+        else if (check.getType() == Material.GOLD_BLOCK)
+            return 2;
+        else if (check.getType() == Material.IRON_BLOCK)
+            return 1;
+        return 0;
+    }
+
+    public int getSpellLevel(String spell) {
+        return Magic.getInstance().getConfig().getInt("spells." + spell + ".level");
+    }
+
+    public String getWandID(ItemStack i) {
+        if (!i.hasItemMeta())
+            return null;
+        if (!i.getItemMeta().hasLore())
+            return null;
+
+        List<String> lore = i.getItemMeta().getLore();
+        return HiddenStringUtils.extractHiddenString(lore.get(lore.size()-1)).split(" ")[1];
     }
 
     public Material getWandType() {
