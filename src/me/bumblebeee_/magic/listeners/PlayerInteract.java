@@ -2,11 +2,9 @@ package me.bumblebeee_.magic.listeners;
 
 import me.bumblebeee_.magic.HiddenStringUtils;
 import me.bumblebeee_.magic.Magic;
+import me.bumblebeee_.magic.SpellCastEvent;
 import me.bumblebeee_.magic.SpellManager;
-import net.md_5.bungee.api.ChatColor;
-import org.bukkit.Effect;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.entity.*;
@@ -137,6 +135,13 @@ public class PlayerInteract implements Listener {
             }
 
             String spell = SpellManager.selected.get(id);
+            SpellCastEvent spellCast = new SpellCastEvent(p, spell);
+            Bukkit.getServer().getPluginManager().callEvent(spellCast);
+            if (spellCast.isCancelled()) {
+                p.sendMessage("You do not have enough mana!");
+                return;
+            }
+
             if (spell.equalsIgnoreCase("fireball")) {
                 p.launchProjectile(Fireball.class);
             } else if (spell.equalsIgnoreCase("lightning")) {
