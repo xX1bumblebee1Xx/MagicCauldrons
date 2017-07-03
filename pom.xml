@@ -2,13 +2,13 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.bumblebeee_.magic</groupId>
-    <artifactId>MagicCauldron</artifactId>
+    <artifactId>MagicCauldrons</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
     <properties>
         <author>BumbleBeee_</author>
-        <mainClass>me.bumblebeee_.morph.Morph</mainClass>
+        <mainClass>me.bumblebeee_.magic.Magic</mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

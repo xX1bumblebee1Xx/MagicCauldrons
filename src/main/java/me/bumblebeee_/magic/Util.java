@@ -1,4 +1,4 @@
-package me.bumblebeee_.magic;
+package main.java.me.bumblebeee_.magic;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

@@ -1,7 +1,7 @@
-package me.bumblebeee_.magic;
+package main.java.me.bumblebeee_.magic;
 
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;

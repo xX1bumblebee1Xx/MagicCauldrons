@@ -1,8 +1,8 @@
-package me.bumblebeee_.magic.listeners;
+package main.java.me.bumblebeee_.magic.listeners;
 
-import me.bumblebeee_.magic.Magic;
-import me.bumblebeee_.magic.ManaManager;
-import me.bumblebeee_.magic.events.SpellCastEvent;
+import main.java.me.bumblebeee_.magic.Magic;
+import main.java.me.bumblebeee_.magic.ManaManager;
+import main.java.me.bumblebeee_.magic.events.SpellCastEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

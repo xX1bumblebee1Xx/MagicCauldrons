@@ -1,6 +1,6 @@
-package me.bumblebeee_.magic;
+package main.java.me.bumblebeee_.magic;
 
-import me.bumblebeee_.magic.listeners.*;
+import main.java.me.bumblebeee_.magic.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -46,7 +46,6 @@ public class Magic extends JavaPlugin {
 
     public void registerEvents() {
         Bukkit.getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
-        Bukkit.getServer().getPluginManager().registerEvents(new OffhandSwap(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new DropItem(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new SpellCast(), this);

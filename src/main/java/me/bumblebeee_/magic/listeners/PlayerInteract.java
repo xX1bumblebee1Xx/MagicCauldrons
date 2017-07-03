@@ -1,7 +1,7 @@
-package me.bumblebeee_.magic.listeners;
+package main.java.me.bumblebeee_.magic.listeners;
 
-import me.bumblebeee_.magic.*;
-import me.bumblebeee_.magic.events.SpellCastEvent;
+import main.java.me.bumblebeee_.magic.*;
+import main.java.me.bumblebeee_.magic.events.SpellCastEvent;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
