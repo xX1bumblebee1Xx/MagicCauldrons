@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 public class Commands implements CommandExecutor {
 
     SpellManager spells = new SpellManager();
+    Messages msgs = new Messages();
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String lbl, String[] args) {
@@ -15,11 +16,11 @@ public class Commands implements CommandExecutor {
 
             if (args.length > 0) {
                 if (!sender.hasPermission("magic.reload")) {
-                    sender.sendMessage( "You do not have the required permissions!");
+                    sender.sendMessage(msgs.getMessage("noPermissions"));
                     return false;
                 }
                 Magic.getInstance().reloadConfig();
-                sender.sendMessage("Successfully reloaded config!");
+                sender.sendMessage(msgs.getMessage("configReloaded"));
                 return true;
             }
 
@@ -30,7 +31,7 @@ public class Commands implements CommandExecutor {
 
             Player p = (Player) sender;
             spells.giveWandToPlayer(p);
-            sender.sendMessage("Given wand");
+            sender.sendMessage(msgs.getMessage("givenWand"));
             return true;
         }
         return false;

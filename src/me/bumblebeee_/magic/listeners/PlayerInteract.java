@@ -27,6 +27,7 @@ public class PlayerInteract implements Listener {
     SpellManager spells = new SpellManager();
     AbilityManager abilities = new AbilityManager();
     Util utils = new Util();
+    Messages msgs = new Messages();
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent e) {
@@ -48,7 +49,7 @@ public class PlayerInteract implements Listener {
 
             Cauldron c = (Cauldron) b.getState().getData();
             if (c.isEmpty()) {
-                p.sendMessage("Cauldron is empty!");
+                p.sendMessage(msgs.getMessage("emptyCauldron"));
                 return;
             }
 
@@ -64,7 +65,7 @@ public class PlayerInteract implements Listener {
 
             String spell = spells.getSpell(items);
             if (spell == null || Magic.getInstance().getConfig().getBoolean("spells." + spell + ".disabled")) {
-                p.sendMessage("Could not find a spell for them ingredients!");
+                p.sendMessage(msgs.getMessage("spellNotFound"));
                 return;
             }
 
@@ -72,30 +73,30 @@ public class PlayerInteract implements Listener {
             int caulLevel = spells.getCauldronLevel(b);
 
             if (spellLevel > caulLevel) {
-                p.sendMessage("This cauldron is not capable of casting this spell!");
+                p.sendMessage(msgs.getMessage("levelToLow"));
                 return;
             }
 
             if (p.getInventory().getItemInMainHand() == null) {
-                p.sendMessage("You must be holding your wand!");
+                p.sendMessage(msgs.getMessage("notHoldingWand"));
                 return;
             }
             if (p.getInventory().getItemInMainHand().getType() != spells.getWandType()) {
-                p.sendMessage("You must be holding your wand!");
+                p.sendMessage(msgs.getMessage("notHoldingWand"));
                 return;
             }
             if (!p.getInventory().getItemInMainHand().hasItemMeta()) {
-                p.sendMessage("You must be holding your wand!");
+                p.sendMessage(msgs.getMessage("notHoldingWand"));
                 return;
             }
             if (!p.getInventory().getItemInMainHand().getItemMeta().hasDisplayName()) {
-                p.sendMessage("You must be holding your wand!");
+                p.sendMessage(msgs.getMessage("notHoldingWand"));
                 return;
             }
             String display = p.getInventory().getItemInMainHand().getItemMeta().getDisplayName();
             String wandName = ChatColor.translateAlternateColorCodes('&', Magic.getInstance().getConfig().getString("wandName"));
             if (!display.equalsIgnoreCase(wandName)) {
-                p.sendMessage("You must be holding your wand!");
+                p.sendMessage(msgs.getMessage("notHoldingWand"));
                 return;
             }
             wand = p.getInventory().getItemInMainHand();
@@ -104,7 +105,7 @@ public class PlayerInteract implements Listener {
             String id = HiddenStringUtils.extractHiddenString(lore.get(lore.size()-1)).split(" ")[1];
 
             if (spells.getWandSpells(id).contains(spell)) {
-                p.sendMessage("You already have that spell");
+                p.sendMessage(msgs.getMessage("alreadyHaveSpell"));
                 return;
             }
 
@@ -116,7 +117,7 @@ public class PlayerInteract implements Listener {
             BlockState bs = b.getState();
             bs.getData().setData((byte) (c.getData() - 1));
             bs.update();
-            p.sendMessage("Successfully cast spell!");
+            p.sendMessage(msgs.getMessage("successAddedSpell"));
         } else {
             if (e.getAction() != Action.LEFT_CLICK_AIR) {
                 if (e.getAction() != Action.LEFT_CLICK_BLOCK)
@@ -149,7 +150,7 @@ public class PlayerInteract implements Listener {
             }
 
             if (!SpellManager.selected.containsKey(id)) {
-                p.sendMessage("You do not have any spell selected");
+                p.sendMessage(msgs.getMessage("noSpellSelected"));
                 return;
             }
 
@@ -157,7 +158,7 @@ public class PlayerInteract implements Listener {
             SpellCastEvent spellCast = new SpellCastEvent(p, spell);
             Bukkit.getServer().getPluginManager().callEvent(spellCast);
             if (spellCast.isCancelled()) {
-                p.sendMessage("You do not have enough mana!");
+                p.sendMessage(msgs.getMessage("notEnoughMana"));
                 return;
             }
 

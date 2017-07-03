@@ -12,7 +12,9 @@ import java.io.IOException;
 public class Magic extends JavaPlugin {
 
     private static Plugin instance = null;
+
     Runnables run = new Runnables();
+    Messages msgs = new Messages();
 
     @Override
     public void onEnable() {
@@ -21,6 +23,7 @@ public class Magic extends JavaPlugin {
         registerEvents();
         Bukkit.getServer().getPluginCommand("wand").setExecutor(new Commands());
 
+        msgs.setup();
         File f = new File(getDataFolder() + File.separator + "storage.yml");
         if (!f.exists()) {
             try {

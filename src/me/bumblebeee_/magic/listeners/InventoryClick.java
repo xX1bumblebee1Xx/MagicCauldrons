@@ -1,5 +1,6 @@
 package me.bumblebeee_.magic.listeners;
 
+import me.bumblebeee_.magic.Messages;
 import me.bumblebeee_.magic.SpellManager;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
@@ -10,6 +11,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 public class InventoryClick implements Listener {
 
     SpellManager spells = new SpellManager();
+    Messages msgs = new Messages();
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
@@ -31,17 +33,17 @@ public class InventoryClick implements Listener {
         } else if (dis.equals("Deselect spell")) {
             if (SpellManager.selected.containsKey(id)) {
                 SpellManager.selected.remove(id);
-                p.sendMessage("Deselected spell");
+                p.sendMessage(msgs.getMessage("deselectedSpell"));
             } else {
-                p.sendMessage("You do not have any spell selected");
+                p.sendMessage(msgs.getMessage("noSpellSelected"));
             }
             p.closeInventory();
         } else if (dis.startsWith("Select")) {
             String spell = dis.split(" ")[1];
             if (SpellManager.selected.containsKey(id) && SpellManager.selected.get(id).equals(spell)) {
-                p.sendMessage("You already have that spell selected");
+                p.sendMessage(msgs.getMessage("alreadySelected"));
             } else {
-                p.sendMessage("Selected " + spell);
+                p.sendMessage(msgs.getMessage("selectedSpell").replace("<spell>", spell));
                 SpellManager.selected.put(id, spell.toLowerCase());
             }
             p.closeInventory();
