@@ -7,7 +7,7 @@ Get a wand by typing /wand - This will give you an "empty" wand
 To add spells to the wand you have to use ingredients in a cauldron, There are 3 levels of cauldrons as each spells require a certain level.
 
 ![Image](http://i.imgur.com/IPm7ocu.png)
-Left-Right: Level 1, Level 2, Level 3
+<br>Left-Right: Level 1, Level 2, Level 3
 
 Drop the ingredients into the cauldron then rightclick it with your wand to add the spell to your wand and press Q to select a spell
 
