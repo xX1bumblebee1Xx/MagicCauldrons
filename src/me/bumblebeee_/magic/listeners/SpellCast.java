@@ -2,10 +2,9 @@ package me.bumblebeee_.magic.listeners;
 
 import me.bumblebeee_.magic.Magic;
 import me.bumblebeee_.magic.ManaManager;
-import me.bumblebeee_.magic.SpellCastEvent;
+import me.bumblebeee_.magic.events.SpellCastEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.event.Listener;
 
 public class SpellCast implements Listener {

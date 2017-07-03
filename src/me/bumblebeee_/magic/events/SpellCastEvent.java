@@ -1,4 +1,4 @@
-package me.bumblebeee_.magic;
+package me.bumblebeee_.magic.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;

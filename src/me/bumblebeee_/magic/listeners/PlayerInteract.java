@@ -1,10 +1,12 @@
 package me.bumblebeee_.magic.listeners;
 
+import me.bumblebeee_.magic.AbilityManager;
 import me.bumblebeee_.magic.HiddenStringUtils;
 import me.bumblebeee_.magic.Magic;
-import me.bumblebeee_.magic.SpellCastEvent;
+import me.bumblebeee_.magic.events.SpellCastEvent;
 import me.bumblebeee_.magic.SpellManager;
 import org.bukkit.*;
+import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.entity.*;
@@ -27,6 +29,7 @@ import java.util.Set;
 public class PlayerInteract implements Listener {
 
     SpellManager spells = new SpellManager();
+    AbilityManager abilities = new AbilityManager();
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent e) {
@@ -126,9 +129,28 @@ public class PlayerInteract implements Listener {
                 return;
             if (e.getItem().getType() != spells.getWandType())
                 return;
+            if (e.getItem().getType() != spells.getWandType())
+                return;
+            if (!e.getItem().hasItemMeta())
+                return;
+            if (!e.getItem().getItemMeta().hasDisplayName())
+                return;
+            String display = ChatColor.translateAlternateColorCodes('&', Magic.getInstance().getConfig().getString("wandName"));
+            if (!e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase(display))
+                return;
 
             e.setCancelled(true);
             String id = spells.getWandID(e.getItem());
+
+            if (e.getClickedBlock() != null && e.getClickedBlock().getType() == Material.GRASS) {
+                if (abilities.getAbilities(e.getItem()).contains("SHEEP")) {
+                    e.getClickedBlock().setType(Material.DIRT);
+                    int flevel = p.getFoodLevel();
+                    p.setFoodLevel(flevel + 2);
+                    return;
+                }
+            }
+
             if (!SpellManager.selected.containsKey(id)) {
                 p.sendMessage("You do not have any spell selected");
                 return;
