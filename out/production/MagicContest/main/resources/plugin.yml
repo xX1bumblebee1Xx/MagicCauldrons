@@ -1,0 +1,8 @@
+name: MagicCauldron
+main: me.bumblebeee_.magic.Magic
+version: 1.0
+author: BumbleBeee_
+description: Magic!
+commands:
+  wand:
+    description: Give yourself a wand
