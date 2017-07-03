@@ -7,57 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a88882-dbec-4b00-91f8-2f1a5883ca71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/OffhandSwap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MagicCauldron-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/AbilityManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Commands.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/HiddenStringUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Inventories.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Magic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/ManaManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Messages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Runnables$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Runnables$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Runnables.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/SpellManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Util$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Util$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/Util.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/events/SpellCastEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/DropItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/EntityDamage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/EntityDamageByEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/EntityDeath.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/InventoryClick.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/OffhandSwap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/PlayerInteract.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/me/bumblebeee_/magic/listeners/SpellCast.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/AbilityManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/AbilityManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Commands.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Commands.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/HiddenStringUtils.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/HiddenStringUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Inventories.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Inventories.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Magic.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Magic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/ManaManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/ManaManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Messages.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Messages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Runnables.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Runnables.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/SpellManager.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/SpellManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Util.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/events/SpellCastEvent.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/events/SpellCastEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/DropItem.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/DropItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDamage.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDamage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDamageByEntity.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDamageByEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDeath.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDeath.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/InventoryClick.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/InventoryClick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/PlayerInteract.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/PlayerInteract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/SpellCast.java" afterPath="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/SpellCast.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/plugin.yml" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="MagicContest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,14 +42,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InventoryClick.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/InventoryClick.java">
+      <file leaf-file-name="PlayerInteract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/PlayerInteract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8602941">
-              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="206" column="17" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.53846157">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,7 +108,6 @@
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/Messages.java" />
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/listeners/InventoryClick.java" />
         <option value="$PROJECT_DIR$/src/me/bumblebeee_/magic/Magic.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/events/SpellCastEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/SpellCast.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/PlayerInteract.java" />
@@ -169,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDeath.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/EntityDamageByEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/InventoryClick.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -625,7 +586,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38079828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38079828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28359374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -697,14 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05901639">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/events/SpellCastEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -717,14 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17704917">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/PlayerInteract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29508197">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -766,7 +711,7 @@
         <state vertical-scroll-proportion="0.17377049">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,7 +745,7 @@
         <state vertical-scroll-proportion="0.49632353">
           <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,7 +755,7 @@
         <state vertical-scroll-proportion="0.47058824">
           <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -820,7 +765,7 @@
         <state vertical-scroll-proportion="0.5367647">
           <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,7 +775,7 @@
         <state vertical-scroll-proportion="0.8272059">
           <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -856,17 +801,7 @@
         <state vertical-scroll-proportion="0.6691176">
           <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Magic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -881,11 +816,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/InventoryClick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8602941">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.66220737">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/Magic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16551724">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/bumblebeee_/magic/listeners/PlayerInteract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="206" column="17" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53846157">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
