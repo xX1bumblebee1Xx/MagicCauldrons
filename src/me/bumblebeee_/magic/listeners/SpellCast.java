@@ -18,6 +18,7 @@ public class SpellCast implements Listener {
             mana.getManaPlayers().put(p.getUniqueId(), 100.0);
 
         int manaRequired = Magic.getInstance().getConfig().getInt("spells." + e.getSpell() + ".mana");
+        System.out.println(manaRequired + " : " + mana.getManaPlayers().get(p.getUniqueId()));
         if (mana.getManaPlayers().get(p.getUniqueId()) < manaRequired) {
             e.setCancelled(true);
             return;

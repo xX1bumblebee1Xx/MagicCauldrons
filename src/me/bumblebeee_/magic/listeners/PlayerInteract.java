@@ -1,12 +1,8 @@
 package me.bumblebeee_.magic.listeners;
 
-import me.bumblebeee_.magic.AbilityManager;
-import me.bumblebeee_.magic.HiddenStringUtils;
-import me.bumblebeee_.magic.Magic;
+import me.bumblebeee_.magic.*;
 import me.bumblebeee_.magic.events.SpellCastEvent;
-import me.bumblebeee_.magic.SpellManager;
 import org.bukkit.*;
-import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.entity.*;
@@ -30,6 +26,7 @@ public class PlayerInteract implements Listener {
 
     SpellManager spells = new SpellManager();
     AbilityManager abilities = new AbilityManager();
+    Util utils = new Util();
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent e) {
@@ -206,6 +203,19 @@ public class PlayerInteract implements Listener {
                     blockToAdd = blocksToAdd.next().getLocation();
                     blockToAdd.getBlock().setType(Material.AIR);
                     p.getWorld().playEffect(blockToAdd, Effect.SMOKE, 4);
+                }
+            } else if (spell.equalsIgnoreCase("throwBlocks")) {
+                Location l = p.getTargetBlock(((Set<Material>) null), 10).getLocation();
+                Location typeLoc = l.clone();
+                Material m = typeLoc.subtract(0,1,0).getBlock().getType();
+                for (int i = 0; i < 3; i++) {
+                    if (m == Material.AIR) {
+                        m = typeLoc.subtract(0, 1, 0).getBlock().getType();
+                    }
+                }
+
+                for (int i = 0; i <= 20; i++) {
+                    utils.throwb(m, typeLoc);
                 }
             }
         }

@@ -42,7 +42,7 @@ spells:
     - SPIDER_EYE
     - REDSTONE
     - NETHER_STALK
-  abilityStealer:
+  abilitystealer:
     disabled: false
     mana: 20
     level: 3
@@ -58,3 +58,11 @@ spells:
     - REDSTONE
     - NETHER_STALK
     - DIAMOND_PICKAXE
+  throwblocks:
+    disabled: false
+    mana: 30
+    level: 3
+    recipe:
+    - REDSTONE
+    - NETHER_STALK
+    - ANVIL
